@@ -53,7 +53,7 @@ def main() -> None:
     claude_prompt = """Human: Explain a black hole to 8th graders in less than 20 words. Assistant:"""
     jurassic_prompt = """Explain a black hole to 8th graders in less than 20 words"""
 
-    #call_claude(claude_prompt)
+    call_claude(claude_prompt)
     call_jurassic(jurassic_prompt)
 
 
