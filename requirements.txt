@@ -1,0 +1,15 @@
+streamlit
+boto3
+Pillow
+transformers
+langchain==0.0.313
+faiss-cpu
+requests
+selenium
+unstructured
+pypdf>=3.8,<4
+sqlalchemy
+anthropic
+jq
+botocore
+awscli
