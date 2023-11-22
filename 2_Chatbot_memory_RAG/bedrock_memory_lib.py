@@ -52,7 +52,5 @@ def get_chat_response(input_text, memory): #chat client function
     )
     
     chat_response = conversation_with_summary.predict(input=input_text) #pass the user message and summary to the model
-        
+    
     return chat_response
-
-
