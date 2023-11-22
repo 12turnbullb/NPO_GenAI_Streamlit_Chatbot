@@ -64,16 +64,11 @@ def call_rag(query):
 
 def app() -> None:
 
-    current_tool = st.selectbox(
-        "Choose Tool:", ["Amazon Bedrock"]
-    )
-
     query = st.text_input("Query:")
 
     if st.button("Submit Query"):
         with st.spinner("Generating..."):
-            if current_tool == "Amazon Bedrock":
-                answer = call_rag(query)
+            answer = call_rag(query)
             if type(answer) == dict:
                 st.markdown(answer["ans"])
                 docs = answer["docs"].split("\n")

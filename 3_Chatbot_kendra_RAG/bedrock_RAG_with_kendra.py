@@ -64,25 +64,20 @@ def main() -> None:
 
     st.title("Bedrock Q&A")
 
-    current_tool = st.selectbox(
-        "Choose Tool:", ["Amazon Bedrock"]
-    )
-
     query = st.text_input("Query:")
 
     if st.button("Submit Query"):
         with st.spinner("Generating..."):
-            if current_tool == "Amazon Bedrock":
-                answer = qa({"query": query})
-                st.markdown(answer["result"])
+            answer = qa({"query": query})
+            st.markdown(answer["result"])
 
-                docs = answer["source_documents"]
+            docs = answer["source_documents"]
 
-                with st.expander("Resources"):
-                    for doc in docs:
-                        doc = str(doc).split("metadata=")[-1]
-                        doc = doc + "\n"
-                        st.write(doc)
+            with st.expander("Resources"):
+                for doc in docs:
+                    doc = str(doc).split("metadata=")[-1]
+                    doc = doc + "\n"
+                    st.write(doc)
 
 if __name__ == "__main__":
     main()

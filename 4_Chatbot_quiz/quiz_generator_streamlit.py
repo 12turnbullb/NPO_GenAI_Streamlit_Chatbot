@@ -166,6 +166,5 @@ if __name__ == "__main__":
     # streamlit run file.py resource URL, customer name, model
     url_of_doc = sys.argv[1]
     customer_name = sys.argv[2]
-    model_used = sys.argv[3]
     print('url_of_doc: ' + str(url_of_doc))
     main(url_of_doc, customer_name)

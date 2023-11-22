@@ -12,7 +12,7 @@ To get started, follow these steps:
 2. **Navigate to the lab folder**:
 
    ```bash
-   cd 3_Chatbot_kendra_RAG
+   cd 3_Chatbot_kendra_RAG/
    ```
 
 3. **Point to your Amazon Kendra index**: Build a Kendra index populated with objects from S3, web crawlers and more. Copy the ID of your kendra index and paste it into the bedrock_RAG_with_kendra.py script near the top.

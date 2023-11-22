@@ -12,7 +12,7 @@ To get started, follow these steps:
 2. **Navigate to the lab folder**:
 
    ```bash
-   cd 1_Chatbot_simple_RAG
+   cd 0_Chatbot_simple/
    ```
 
 3. **Run the Q&A WITHOUT memory script:**

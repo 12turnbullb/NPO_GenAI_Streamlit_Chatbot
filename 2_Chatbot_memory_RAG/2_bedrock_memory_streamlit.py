@@ -46,7 +46,7 @@ def call_rag(query):
         context += doc.page_content
         
     prompt = f"""Human:Use the following pieces of context to answer the question at the end. 
-    Give a very detailed, long answer.
+    Give a very detailed answer. 
 
     {context}
 

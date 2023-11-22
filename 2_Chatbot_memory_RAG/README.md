@@ -1,6 +1,6 @@
 # 2_Chatbot_memory_RAG
 
-LLM with RAG and memory for linked question and answer. Ingest PDF data to local vector store, then pass as context for conversational chain.
+LLM with RAG and memory for linked question and answer. Ingest PDF data to local vector store, then pass as context to the conversational chain.
 
 ## Running the lab
 
@@ -12,12 +12,13 @@ To get started, follow these steps:
 2. **Navigate to the lab folder**:
 
    ```bash
-   cd 2_Chatbot_memory_RAG
+   cd 2_Chatbot_memory_RAG/
    ```
 
 3. **Populate the 'data' folder with custom data:** Empty the 'data' folder and add a few PDFs that are specific to your use case.
 
 4. **Ingest custom data to local index:** Run the 1_bedrock_pdf_ingest.py script to loop through the PDFs and create a local index of data for your LLM to use later on.
+   This might take a few minutes, depending on how many PDFs you've included.
 
    ```bash
    python 1_bedrock_pdf_ingest.py

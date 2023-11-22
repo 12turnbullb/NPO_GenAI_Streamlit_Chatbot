@@ -12,7 +12,7 @@ To get started, follow these steps:
 2. **Navigate to the lab folder**:
 
    ```bash
-   cd 2a_Chatbot_memory_RAG_realtime
+   cd 2a_Chatbot_memory_RAG_realtime/
    ```
 
 3. **Populate the 'data' folder with custom data:** Empty the 'data' folder and add a few PDFs that are specific to your use case.

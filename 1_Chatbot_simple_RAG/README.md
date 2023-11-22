@@ -12,12 +12,12 @@ To get started, follow these steps:
 2. **Navigate to the lab folder**:
 
    ```bash
-   cd 1_Chatbot_simple_RAG
+   cd 1_Chatbot_simple_RAG/
    ```
 
 3. **Populate the 'data' folder with custom data:** Empty the 'data' folder and add a few PDFs that are specific to your use case.
 
-4. **Ingest custom data to local index:** Run the 1_bedrock_pdf_ingest.py script to loop through the PDFs and create a local index of data for your LLM to use later on.
+4. **Ingest custom data to local index:** Run the 1_bedrock_pdf_ingest.py script to loop through the PDFs and create a local index of data for your LLM to use later on. This might take a few minutes, depending on how many PDFs you've included.
 
    ```bash
    python 1_bedrock_pdf_ingest.py
