@@ -58,7 +58,6 @@ def call_rag(query):
 
     generated_text = call_bedrock(prompt)
     #print(generated_text)
-    #translate
     resp_json = {"ans": str(generated_text), "docs": doc_sources_string}
     
     return resp_json
