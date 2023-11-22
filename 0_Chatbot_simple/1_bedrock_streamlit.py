@@ -1,4 +1,3 @@
-# from aws_langchain.kendra import AmazonKendraRetriever #custom library
 from langchain.retrievers import AmazonKendraRetriever
 from langchain.chains import ConversationalRetrievalChain
 from langchain.chains import RetrievalQAWithSourcesChain

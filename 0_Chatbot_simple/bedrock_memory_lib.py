@@ -6,12 +6,6 @@ from langchain.chains import ConversationChain
 
 bedrock = boto3.client(service_name='bedrock-runtime')
 
-# evironment variables
-# export BWB_REGION_NAME="us-east-1"
-# export BWB_PROFILE_NAME="default" 
-# export BWB_ENDPOINT_URL="https://bedrock.us-east-1.amazonaws.com"
-# command to run the app: streamlit run chatbot_app.py --server.port 8080
-
 def get_llm():
 
     inference_modifier = {
