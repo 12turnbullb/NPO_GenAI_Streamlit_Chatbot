@@ -1,10 +1,6 @@
-# from aws_langchain.kendra import AmazonKendraRetriever #custom library
 from langchain.retrievers import AmazonKendraRetriever
-from langchain.chains import ConversationalRetrievalChain
-from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.prompts import PromptTemplate
 from langchain.llms.bedrock import Bedrock
-from langchain.chains.llm import LLMChain
 from langchain.chains import RetrievalQA
 import sys
 import os
@@ -14,10 +10,11 @@ import boto3
 import streamlit as st
 
 def call_chain():
-    region = 'us-east-1'
     # Sub in a Kendra index ID that your AWS account credentials has access to
-    kendra_index_id = '982ec499-4a49-42e5-b344-2097ab05808b'
-    
+    #kendra_index_id = '982ec499-4a49-42e5-b344-2097ab05808b'
+    region = 'us-east-1'
+    kendra_index_id = 'INSERT KENDRA INDEX HERE'
+
     retriever = AmazonKendraRetriever(index_id=kendra_index_id,top_k=5,region_name=region)
 
     llm = Bedrock(

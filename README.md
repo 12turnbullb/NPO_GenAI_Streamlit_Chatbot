@@ -36,10 +36,18 @@ To get started, follow these steps:
    - Select **Manage model access**
    - In this lab we are using the Claude model from Anthropic. Check the Anthropic Claude models and scroll down to select **Save changes**
 
-7. **Choose a lab:** Navigate to a lab subfolder and review the readme to launch the Streamlit application backed by Amazon Bedrock.
+7. **Test Bedrock Access:** Run the 0_bedrock_test.py script in the terminal to test that your evironment has access to call the Bedrock APIs. Be sure you're in the home directory NPO_GenAI_Streamlit_Chatbot.
 
    ```bash
-   ## Example lab
+   python 0_bedrock_test.py
+   ```
+
+   The script passes a prompt asking Claude to explain a black hole to 8th graders and returns the response in the terminal.
+
+8. **Navigate to a lab:** Follow the README.md within each lab to execute the scripts.
+
+   ```bash
+   # Example
    cd 0_Chatbot_simple
    ```
 
@@ -49,16 +57,16 @@ To get started, follow these steps:
    Introductory for open LLM question and answer. One script contains a simple prompt submission and LLM response, and another script includes memory to create a conversational chain.
 
 2. **1_Chatbot_simple_RAG:**
-   LLM with RAG for question and answer. Ingest PDF data to a local index, then pass as context for question answering. No memory, just a simple prompt submission and a customer-data specific response.
+   LLM with RAG for question and answer. Ingest PDF data to a local vector store, then pass as context for question answering. No memory, just a simple prompt submission and a customer-data specific response.
 
 3. **2_Chatbot_memory_RAG:**
-   LLM with RAG and memory for linked question and answer. Ingest PDF data to local index, then pass as context for conversational chain.
+   LLM with RAG and memory for linked question and answer. Ingest PDF data to local vector store, then pass as context for conversational chain.
 
 4. **2a_Chatbot_memory_RAG_realtime:**
-   LLM with RAG and memory for linked question and answer. Instead of saving PDFs to a local index, this version indexes the data in realtime as you load the page. It does not store the data locally, each session kicks off the indexing process.
+   LLM with RAG and memory for linked question and answer. Instead of saving PDFs to a local vector store, this version indexes the data in-memory in realtime as you load the page. It does not persist the vector store locally, each page reload kicks off the indexing process.
 
 5. **3_Chatbot_kendra_RAG:**
-   LLM with RAG for question and answer. Instead of ingesting customer data to a local index, connect to a Kendra index that has been populated ahead of time. Kendra can connect to Amazon S3 buckets, crawl websites and more to build a corpus of data.
+   LLM with RAG for question and answer. Instead of ingesting customer data to a local vector store, connect to an Amazon Kendra index that has been populated ahead of time. Kendra can connect to Amazon S3 buckets, crawl websites and more to build a corpus of data.
 
 6. **4_Chatbot_quiz:**
    Quiz generator that passes in URLs as context to develop a question bank then leads users through a custom quiz on Streamlit.

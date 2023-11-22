@@ -4,7 +4,7 @@ import boto3
 from langchain.embeddings import BedrockEmbeddings
 from langchain.vectorstores import FAISS
 import streamlit as st
-import bedrock_3_chatbot_lib as glib #reference to local lib script
+import bedrock_memory_lib as glib #reference to local lib script
 
 
 bedrock = boto3.client(service_name='bedrock-runtime')

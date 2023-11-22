@@ -53,7 +53,7 @@ def click_button():
 def disable():
     st.session_state.disabled = True
 
-def main(url_of_doc, model_used, customer_name, language):
+def main(url_of_doc, customer_name):
     if 'quiz_generated' not in st.session_state:
         st.session_state['quiz_generated'] = None
         questions = []
@@ -167,6 +167,5 @@ if __name__ == "__main__":
     url_of_doc = sys.argv[1]
     customer_name = sys.argv[2]
     model_used = sys.argv[3]
-    lanuage = 'en'
     print('url_of_doc: ' + str(url_of_doc))
-    main(url_of_doc, model_used, customer_name, lanuage)
+    main(url_of_doc, customer_name)

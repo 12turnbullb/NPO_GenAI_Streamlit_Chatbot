@@ -3,12 +3,8 @@ import sys
 import boto3
 from langchain.embeddings import BedrockEmbeddings
 from langchain.vectorstores import FAISS
-#from transformers import Tool
 import streamlit as st
 import bedrock_memory_lib as glib #reference to local lib script
-
-# need to install the anthropic library
-# pip install anthropic
 
 bedrock = boto3.client(service_name='bedrock-runtime')
 
@@ -66,7 +62,6 @@ def main() -> None:
     if input_text: #run the code in this if block after the user submits a chat message
         docs = []
         answer = call_llm(input_text)
-        #answer = natgeo_tool(input_text, 0)
         print(answer)
         if type(answer) == dict:
             the_prompt = answer["ans"]
