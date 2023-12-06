@@ -71,6 +71,9 @@ To get started, follow these steps:
 6. **4_Chatbot_quiz:**
    Quiz generator that passes in URLs as context to develop a question bank then leads users through a custom quiz on Streamlit.
 
+7. **5_Bedrock_agent:**
+   Chat application that makes an API call to a Bedrock agent configured via the AWS console. This agent has been configured to make calls to a DynamoDB table to retrieve member IDs and update member email addresses.
+
 ## Additional Resources
 
 - [Amazon Bedrock Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-bedrock.html): Explore the official documentation for Amazon Bedrock.
